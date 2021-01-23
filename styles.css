@@ -1,0 +1,433 @@
+:root {
+  --indigo: #4942db;
+  --teal: #14d9c5;
+  --pale_teal: #adf2e0;
+  --yellow: #fff27f;
+  --pink: #ffcbd5;
+  --fuschia: #ff4f79;
+  --white: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.headerWrapper {
+  display: flex;
+  background-color: var(--white);
+  transition: padding-bottom 0.2s ease;
+  padding-bottom: 1.5rem;
+  padding-top: 2rem;
+  padding-left: 4rem;
+  z-index: 1;
+}
+
+.headerWrapper.--scroll {
+  transition: all 0.2s ease;
+  padding-bottom: 0.75rem;
+  padding-top: 1rem;
+}
+
+.mainLogo {
+  fill: var(--indigo);
+  width: 264px;
+  height: 69px;
+  transition: all 0.2s ease;
+}
+
+.mainLogo.--scroll {
+  transition: all 0.2s ease;
+  width: 157px;
+  height: 41px;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-around;
+  align-self: flex-end;
+  width: 50%;
+  margin-left: 1rem;
+}
+
+.linkUnderline {
+  transition: width 0.75s ease;
+  background-color: var(--indigo);
+  height: 0.25rem;
+  width: 0%;
+}
+
+.underlinedItem:hover > .linkUnderline {
+  width: 100%;
+}
+
+.navLink {
+  color: var(--indigo);
+  text-transform: uppercase;
+  font-weight: bolder;
+  z-index: 2;
+}
+
+.alertPopup {
+  background-color: var(--yellow);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.alertPopup a {
+  text-decoration: underline;
+}
+
+h5 {
+  color: var(--indigo);
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 18px;
+  text-align: center;
+  margin: 1rem;
+}
+
+h6 {
+  color: var(--indigo);
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-align: center;
+  margin: 1rem;
+}
+
+.videoWrapper {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+video {
+  object-fit: fill;
+}
+
+section {
+  display: flex;
+}
+
+.firstSection {
+  background-color: var(--teal);
+}
+
+.sectionContent {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.firstSectionContent {
+  color: var(--white);
+}
+
+.sectionHeading {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.contentBody {
+  font-size: 20px;
+}
+
+.sectionImageContainer {
+  padding: 1rem;
+  width: 50%;
+}
+
+.sectionImage {
+  object-fit: cover;
+}
+
+.firstSectionImage {
+  width: 600px;
+  height: 544px;
+}
+
+.sectionButton {
+  height: 70px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 2rem;
+  text-align: left;
+}
+
+.buttonIcon {
+  transition: transform 0.5s ease;
+  width: 50px;
+  height: 30px;
+}
+
+.sectionButton:hover > .buttonIcon {
+  transition: transform 0.5s ease;
+  transform: translate(10px);
+}
+
+.firstSectionButton {
+  background-color: var(--indigo);
+  color: var(--white);
+}
+
+.secondSection {
+  background-color: var(--pink);
+  color: var(--fuschia);
+}
+
+.secondSectionImage {
+  width: 600px;
+  height: 400px;
+}
+
+.secondSectionHeading {
+  font-size: 38px;
+}
+
+.secondSectionButton {
+  background-color: var(--fuschia);
+  color: var(--white);
+}
+
+.thirdSection {
+  background-color: var(--pale_teal);
+  color: var(--fuschia);
+}
+
+.thirdSectionButton {
+  background-color: var(--indigo);
+  color: var(--white);
+}
+
+.thirdSectionHeading {
+  font-size: 48px;
+}
+
+.legend {
+  text-transform: uppercase;
+  padding: 1rem;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.thirdSectionHeading {
+  padding: 1rem;
+}
+
+.thirdSectionButton {
+  margin: 1rem;
+}
+
+.thirdSectionImage {
+  width: 600px;
+  height: 400px;
+}
+
+.fourthSection {
+  background-color: var(--fuschia);
+  color: var(--yellow);
+}
+
+.fourthSectionButton {
+  background-color: var(--yellow);
+  color: var(--fuschia);
+}
+
+.fourthSectionImageContainer {
+  width: 50%;
+}
+
+.fourthSectionImage {
+  width: 640px;
+  height: 450px;
+}
+
+.fifthSection {
+  background-color: var(--yellow);
+  color: var(--fuschia);
+}
+
+.fifthSectionButton {
+  background-color: var(--indigo);
+  color: var(--white);
+}
+
+.fifthSectionHeading {
+  font-size: 54px;
+}
+
+.fifthSectionImage {
+  width: 600px;
+  height: 436px;
+}
+
+.fifthSectionButton {
+  margin-top: 3rem;
+}
+
+.instagramSection {
+  background-color: var(--teal);
+  color: var(--indigo);
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.instagramSectionHeading {
+  display: flex;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+
+.instagramHeading {
+  text-transform: uppercase;
+  font-size: 24px;
+  padding: 1 rem;
+  font-weight: bold;
+}
+
+.instagramIcon {
+  padding: 1rem;
+}
+
+.instagramImageSlides {
+  display: flex;
+}
+
+.instagramImageContainer {
+  background-color: var(--white);
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.instagramImage {
+  width: 232px;
+  height: 232px;
+}
+
+.instagramButtonContainer {
+  padding: 2rem;
+}
+
+.instagramButton {
+  background-color: var(--indigo);
+  color: var(--teal);
+}
+
+.footer {
+  background-color: var(--white);
+  padding: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 2rem;
+  display: flex;
+}
+
+.footerRightContainer {
+  /* width: 40%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerLeftContainer {
+  width: 60%;
+}
+
+.footerLogo {
+  width: 230px;
+  height: 69px;
+  padding: 1rem;
+}
+
+.footerLinksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.footerItem {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.footerLink {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--indigo);
+  font-size: 14px;
+}
+
+.footerSignupContent {
+  display: flex;
+}
+
+.footerSignupHeading {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--indigo);
+  font-size: 22px;
+  padding: 1rem;
+  white-space: nowrap;
+}
+
+.footerSignupSubtitle {
+  color: var(--indigo);
+  font-size: 16px;
+  padding: 1rem;
+}
+
+.footerSocialContainer {
+  display: flex;
+  padding-bottom: 0.3rem;
+}
+
+.footerSocialItem {
+  background-color: var(--indigo);
+  border-radius: 100%;
+  margin: 1rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0.1rem;
+}
+
+.socialIcon {
+  display: block;
+  margin: 0 auto;
+}
+
+.signature {
+  color: var(--indigo);
+  font-size: 16px;
+  padding: 1rem;
+  text-decoration: none;
+}
