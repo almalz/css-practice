@@ -17,10 +17,19 @@ html {
   font-family: sans-serif;
 }
 
-header {
+html,
+body {
   width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  /* overflow-x: hidden; */
+}
+
+header {
   position: sticky;
   top: 0;
+  z-index: 999;
 }
 
 .headerWrapper {
@@ -30,7 +39,6 @@ header {
   padding-bottom: 1.5rem;
   padding-top: 2rem;
   padding-left: 4rem;
-  z-index: 1;
 }
 
 .headerWrapper.--scroll {
@@ -75,7 +83,7 @@ header {
   color: var(--indigo);
   text-transform: uppercase;
   font-weight: bolder;
-  z-index: 2;
+  z-index: 10;
 }
 
 .alertPopup {
@@ -108,30 +116,41 @@ h6 {
 }
 
 .videoWrapper {
+  position: relative;
   width: 100%;
   height: 500px;
   overflow: hidden;
 }
 
 video {
+  position: absolute;
+  width: 100%;
   object-fit: fill;
 }
 
 section {
   display: flex;
+  width: 100%;
 }
 
 .firstSection {
   background-color: var(--teal);
+  position: static;
 }
 
 .sectionContent {
-  display: flex;
-  flex-direction: column;
   width: 50%;
-  padding: 5rem;
+  padding-bottom: 3rem;
+}
+
+.contentWrapper {
+  height: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: space-evenly;
   align-items: center;
@@ -151,16 +170,29 @@ section {
 }
 
 .sectionImageContainer {
-  padding: 1rem;
   width: 50%;
+  position: relative;
+}
+
+.sectionImageWrapper {
+  display: block;
+  margin: auto;
 }
 
 .sectionImage {
   object-fit: cover;
+  position: absolute;
+  z-index: 0;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
 }
 
 .firstSectionImage {
-  width: 600px;
+  width: 100%;
   height: 544px;
 }
 
@@ -197,11 +229,12 @@ section {
 .secondSection {
   background-color: var(--pink);
   color: var(--fuschia);
+  position: static;
 }
 
 .secondSectionImage {
-  width: 600px;
-  height: 400px;
+  width: 100%;
+  height: 398px;
 }
 
 .secondSectionHeading {
@@ -216,6 +249,7 @@ section {
 .thirdSection {
   background-color: var(--pale_teal);
   color: var(--fuschia);
+  position: static;
 }
 
 .thirdSectionButton {
@@ -243,13 +277,14 @@ section {
 }
 
 .thirdSectionImage {
-  width: 600px;
-  height: 400px;
+  width: 100%;
+  height: 395px;
 }
 
 .fourthSection {
   background-color: var(--fuschia);
   color: var(--yellow);
+  position: static;
 }
 
 .fourthSectionButton {
@@ -259,16 +294,28 @@ section {
 
 .fourthSectionImageContainer {
   width: 50%;
+  position: relative;
+}
+
+.fourthSectionImageWrapper {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 452px;
 }
 
 .fourthSectionImage {
-  width: 640px;
-  height: 450px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 0;
 }
 
 .fifthSection {
   background-color: var(--yellow);
   color: var(--fuschia);
+  position: static;
 }
 
 .fifthSectionButton {
@@ -281,7 +328,7 @@ section {
 }
 
 .fifthSectionImage {
-  width: 600px;
+  width: 100%;
   height: 436px;
 }
 
@@ -292,10 +339,12 @@ section {
 .instagramSection {
   background-color: var(--teal);
   color: var(--indigo);
-  padding: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .instagramSectionHeading {
@@ -317,17 +366,20 @@ section {
 
 .instagramImageSlides {
   display: flex;
+  width: 80%;
 }
 
 .instagramImageContainer {
   background-color: var(--white);
   padding: 1rem;
   margin: 0.5rem;
+  flex: 1 1 0px;
+  width: 100%;
 }
 
 .instagramImage {
-  width: 232px;
-  height: 232px;
+  width: 100%;
+  height: 100%;
 }
 
 .instagramButtonContainer {
@@ -349,7 +401,6 @@ section {
 }
 
 .footerRightContainer {
-  /* width: 40%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -430,4 +481,30 @@ section {
   font-size: 16px;
   padding: 1rem;
   text-decoration: none;
+}
+
+@media screen and (max-device-width: 768px) {
+  section {
+    flex-direction: column;
+  }
+  .sectionContent {
+    width: 100%;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+  .sectionImageContainer {
+    width: 100%;
+  }
+  .fourthSectionImageContainer {
+    width: 100%;
+  }
+  .alertPopup {
+    padding: 1rem;
+  }
+  h5 {
+    font-size: 22px;
+  }
+  h6 {
+    font-size: 10px;
+  }
 }
