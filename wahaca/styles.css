@@ -22,7 +22,6 @@ body {
   width: 100%;
   margin: 0px;
   padding: 0px;
-  /* overflow-x: hidden; */
 }
 
 header {
@@ -39,7 +38,6 @@ header {
   padding-top: 2rem;
   padding-left: 4rem;
   align-items: center;
-  justify-content: center;
 }
 
 .headerWrapper.--scroll {
@@ -176,7 +174,6 @@ h4 {
   display: flex;
   flex-direction: column;
   text-align: center;
-  /* justify-content: space-evenly; */
   align-items: center;
 }
 
@@ -592,7 +589,6 @@ h4 {
 }
 
 .burgerIcon {
-  /* display: block; */
   opacity: 1;
   visibility: visible;
   transition: all 0.2s ease;
@@ -602,19 +598,16 @@ h4 {
 .closeIcon {
   opacity: 0;
   visibility: hidden;
-  /* display: none; */
   transition: all 0.2s ease;
   transform: scale(1, 0);
 }
 
 .smMenuWrapper.--isOpen .closeIcon {
-  /* display: block; */
   opacity: 1;
   visibility: visible;
   transform: scale(1, 1);
 }
 .smMenuWrapper.--isOpen .burgerIcon {
-  /* display: none; */
   opacity: 0;
   visibility: hidden;
   transform: scale(1, 0);
