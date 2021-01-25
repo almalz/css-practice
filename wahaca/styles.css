@@ -38,6 +38,8 @@ header {
   padding-bottom: 1.5rem;
   padding-top: 2rem;
   padding-left: 4rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .headerWrapper.--scroll {
@@ -61,10 +63,13 @@ header {
 
 .navContainer {
   display: flex;
-  justify-content: space-around;
   align-self: flex-end;
-  width: 50%;
   margin-left: 1rem;
+}
+
+.navItem {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .linkUnderline {
@@ -537,4 +542,123 @@ h4 {
   .contentBody {
     font-size: 32px;
   }
+  .lgMenuWrapper {
+    display: none;
+  }
+
+  .smMenuWrapper {
+    display: block;
+  }
+
+  .mainLogo {
+    fill: var(--indigo);
+    width: 157px;
+    height: 41px;
+  }
+
+  .headerWrapper {
+    display: flex;
+    background-color: var(--white);
+    transition: padding-bottom 0.2s ease;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-device-width: 768px) {
+  .lgMenuWrapper {
+    display: block;
+  }
+  .smMenuWrapper {
+    display: none;
+  }
+}
+
+.menuIconContainer {
+  width: 35px;
+  height: 35px;
+  padding: 1rem;
+  position: relative;
+}
+
+.menuIcon {
+  position: absolute;
+  display: block;
+  margin: auto;
+  width: 35px;
+  height: 35px;
+}
+
+.burgerIcon {
+  /* display: block; */
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.2s ease;
+  transform: scale(1, 1);
+}
+
+.closeIcon {
+  opacity: 0;
+  visibility: hidden;
+  /* display: none; */
+  transition: all 0.2s ease;
+  transform: scale(1, 0);
+}
+
+.smMenuWrapper.--isOpen .closeIcon {
+  /* display: block; */
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1, 1);
+}
+.smMenuWrapper.--isOpen .burgerIcon {
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1, 0);
+}
+
+.burgerMenuContainer {
+  position: absolute;
+  z-index: 10;
+  background-color: var(--indigo);
+  width: 0%;
+  height: 100vh;
+  right: 0;
+  transition: all 0.1s ease;
+  visibility: hidden;
+}
+
+.smMenuWrapper.--isOpen .burgerMenuContainer {
+  visibility: visible;
+  width: 95%;
+  transition: width 0.1s ease;
+}
+
+.menuItemContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+  align-items: flex-end;
+  padding-top: 1rem;
+  visibility: hidden;
+}
+
+.smMenuWrapper.--isOpen .menuItemContainer {
+  visibility: visible;
+  transition: visibility 0.1s 0.1s;
+}
+
+.menuItem {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.menuLink {
+  color: var(--teal);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 24px;
 }

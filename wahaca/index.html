@@ -5,36 +5,80 @@
   <meta charset="utf-8">
   <title>Wahaca.co.uk clone</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js"></script>
 </head>
 
 <body>
   <header class="header">
-    <div class="headerWrapper">
-      <div class="mainLogoContainer">
-        <img class="mainLogo" src="assets/logo.svg" height="68.7" width="264" />
+    <div class="lgMenuWrapper">
+      <div class="headerWrapper">
+        <div class="mainLogoContainer">
+          <img class="mainLogo" src="assets/logo.svg" height="68.7" width="264" />
+        </div>
+        <nav class="navContainer">
+          <div class="navItem underlinedItem">
+            <a class="navLink">Book now</a>
+            <div class="linkUnderline"></div>
+          </div>
+          <div class="navItem underlinedItem">
+            <a class="navLink">Order online</a>
+            <div class="linkUnderline"></div>
+          </div>
+          <div class="navItem underlinedItem">
+            <a class="navLink">Menus</a>
+            <div class="linkUnderline"></div>
+          </div>
+          <div class="navItem underlinedItem">
+            <a class="navLink">Sustainability</a>
+            <div class="linkUnderline"></div>
+          </div>
+          <div class="navItem underlinedItem">
+            <a class="navLink">Locations</a>
+            <div class="linkUnderline"></div>
+          </div>
       </div>
-      <nav class="navContainer">
-        <div class="navItem underlinedItem">
-          <a class="navLink">Book now</a>
-          <div class="linkUnderline"></div>
+    </div>
+    <div class="smMenuWrapper">
+      <div class="headerWrapper">
+        <div class="mainLogoContainer">
+          <img class="mainLogo" src="assets/logo.svg" height="68.7" width="264" />
         </div>
-        <div class="navItem underlinedItem">
-          <a class="navLink">Order online</a>
-          <div class="linkUnderline"></div>
+        <div class="menuIconContainer">
+          <svg class="menuIcon burgerIcon" fill="#4942db" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="459px" height="459px"
+            viewBox="0 0 459 459" style="enable-background:new 0 0 459 459;" xml:space="preserve">
+            <g>
+              <g id="menu">
+                <path d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z" />
+              </g>
+          </svg>
+          <svg class="menuIcon closeIcon" fill="#4942db" id="Capa_1" enable-background="new 0 0 386.667 386.667"
+            height="512" viewBox="0 0 386.667 386.667" width="512" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m386.667 45.564-45.564-45.564-147.77 147.769-147.769-147.769-45.564 45.564 147.769 147.769-147.769 147.77 45.564 45.564 147.769-147.769 147.769 147.769 45.564-45.564-147.768-147.77z" />
+          </svg>
         </div>
-        <div class="navItem underlinedItem">
-          <a class="navLink">Menus</a>
-          <div class="linkUnderline"></div>
+      </div>
+      <div class="burgerMenuLayout">
+        <div class="burgerMenuContainer">
+          <div class="menuItemContainer">
+            <div class="menuItem">
+              <a class="menuLink"> Book Now</a>
+            </div>
+            <div class="menuItem">
+              <a class="menuLink"> Order Online</a>
+            </div>
+            <div class="menuItem">
+              <a class="menuLink"> Menus</a>
+            </div>
+            <div class="menuItem">
+              <a class="menuLink"> Sustainability</a>
+            </div>
+            <div class="menuItem">
+              <a class="menuLink"> Locations</a>
+            </div>
+          </div>
         </div>
-        <div class="navItem underlinedItem">
-          <a class="navLink">Sustainability</a>
-          <div class="linkUnderline"></div>
-        </div>
-        <div class="navItem underlinedItem">
-          <a class="navLink">Locations</a>
-          <div class="linkUnderline"></div>
-        </div>
+      </div>
     </div>
     </nav>
   </header>
@@ -265,6 +309,8 @@
       </button>
     </div>
   </footer>
+  <script src="script.js"></script>
+
 </body>
 
 </html>
