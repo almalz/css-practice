@@ -1,0 +1,128 @@
+$white: #ffffff;
+$black: #000000;
+$cyan: #00e2c2;
+$light_green: #96c31e;
+$dark_green: #02555b;
+$medium_green: #73b455;
+$pink: #f701b5;
+$orange: #fda31a;
+$yellow: #ffff00;
+$red: #cd0b26;
+
+@font-face {
+  font-family: 'nandos';
+  src: url('//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.eot');
+  src: url('//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/6fc835b71af69222366fb9c510a3edb1.svg#Nandos-Regular')
+      format('svg');
+}
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  body {
+    margin: 0;
+  }
+  h2 {
+    font-family: nandos, Helvetica, Arial, Geneva, sans-serif;
+    background-color: $yellow;
+    margin: 0;
+  }
+}
+
+ol,
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+header {
+  background-color: white;
+  display: flex;
+  width: 100%;
+  .logo {
+    padding-left: 1.25rem;
+    padding-top: 0.5rem;
+    height: inherit;
+    a {
+      width: 114px;
+      height: 38px;
+      background-image: url(/assets/barci.svg);
+      display: block;
+    }
+  }
+  nav {
+    flex: 1 1 auto;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+
+    margin-left: 2rem;
+    margin-right: 2rem;
+    align-items: end;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        text-transform: uppercase;
+        font-weight: 550;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      li:last-child {
+        border-left: solid black 1px;
+        padding-left: 1rem;
+      }
+      li:hover {
+        color: $red;
+      }
+    }
+  }
+
+  .utility_links {
+    display: flex;
+    padding-right: 4rem;
+    align-items: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    ul {
+      display: flex;
+      li {
+        display: flex;
+        align-items: center;
+        .profile_button {
+          display: block;
+          height: 30px;
+          width: 30px;
+          background-size: contain;
+          content: '';
+          background-image: url(/assets/user_green.svg);
+        }
+        .profile_button:hover {
+          background-image: url(/assets/user_white.svg);
+          background-color: $light_green;
+          border-radius: 50%;
+          background-position: center center;
+        }
+
+        .order_button {
+          background-color: $cyan;
+          text-transform: uppercase;
+          font-weight: 500;
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
