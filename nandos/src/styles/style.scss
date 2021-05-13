@@ -1,3 +1,6 @@
+@import '../../node_modules/@glidejs/glide/src/assets/sass/glide.core';
+@import '../../node_modules/@glidejs/glide/src/assets/sass/glide.theme';
+
 $white: #ffffff;
 $black: #000000;
 $cyan: #00e2c2;
@@ -26,14 +29,14 @@ $red: #cd0b26;
 
 html {
   font-family: Helvetica, Arial, sans-serif;
-  body {
-    margin: 0;
-  }
-  h2 {
-    font-family: nandos, Helvetica, Arial, Geneva, sans-serif;
-    background-color: $yellow;
-    margin: 0;
-  }
+}
+body {
+  margin: 0;
+}
+h2 {
+  font-family: nandos, Helvetica, Arial, Geneva, sans-serif;
+  margin: 0;
+  font-size: 3.75rem;
 }
 
 ol,
@@ -41,6 +44,19 @@ ul {
   list-style: none;
   padding-inline-start: 0;
   margin: 0;
+}
+
+a.button {
+  background-color: $cyan;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-left: 1rem;
+  max-width: max-content;
+  max-height: min-content;
 }
 
 header {
@@ -111,18 +127,106 @@ header {
           border-radius: 50%;
           background-position: center center;
         }
-
-        .order_button {
-          background-color: $cyan;
-          text-transform: uppercase;
-          font-weight: 500;
-          padding-left: 1.5rem;
-          padding-right: 1.5rem;
-          padding-top: 0.5rem;
-          padding-bottom: 0.5rem;
-          margin-left: 1rem;
-        }
       }
     }
   }
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+  height: 550px;
+  h2 {
+    color: $white;
+  }
+  p {
+    color: $white;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+}
+
+.glide__slides {
+  height: 550px;
+}
+
+.glide__slide {
+  line-height: 100px;
+  margin: 0;
+  text-align: center;
+  // -webkit-transform: translate3d(0, 0, 0);
+  // -moz-transform: translate3d(0, 0, 0);
+  // -ms-transform: translate3d(0, 0, 0);
+  // -o-transform: translate3d(0, 0, 0);
+  // transform: translate3d(0, 0, 0);
+}
+
+.glide__slide--active {
+  z-index: 1;
+}
+
+.glide__arrows {
+  z-index: 90;
+  position: absolute;
+  display: block;
+  top: 50%;
+  width: 100%;
+}
+
+.glide__arrow {
+  z-index: 90;
+  position: absolute;
+  display: block;
+  top: 50%;
+  color: white;
+  padding: 9px 12px;
+  background-color: red;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  transform: translateY(-50%);
+  line-height: 1;
+}
+.glide__arrow--prev {
+  left: 5%;
+}
+.glide__arrow--next {
+  right: 5%;
+}
+
+.slide_content {
+  position: absolute;
+  margin: auto;
+  width: 60%;
+  top: 30%;
+  z-index: 10;
+  transition-property: none;
+  backface-visibility: visible;
+  h2 {
+    transform: rotate(-3deg);
+    &:before {
+      background: url(/assets/lins.png);
+    }
+    &:after {
+      background: url(/assets/lins.png);
+    }
+  }
+  p {
+    font-size: 1.125rem;
+    transform: rotate(-3deg);
+  }
+}
+
+.slide_1 {
+  background-image: url(/assets/SSB-1800x771_live.png);
+}
+
+.slide_2 {
+  background-image: url(/assets/NHS_Banner20-201800x900_0.jpeg);
+}
+
+.slide_3 {
+  background-image: url(/assets/Homepage20180020x20771_desktop.jpeg);
 }

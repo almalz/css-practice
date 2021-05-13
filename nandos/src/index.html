@@ -9,6 +9,7 @@
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👩‍💻</text></svg>" />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap" rel="stylesheet" />
   <link href="/styles/style.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 </head>
 
 <body>
@@ -34,17 +35,52 @@
           <a class="profile_button"></a>
         </li>
         <li class="order_item">
-          <a class="order_button"> Order Online</a>
+          <a class="button"> Order Online</a>
         </li>
       </ul>
     </div>
 
   </header>
-  <h2>This is an H2 title</h2>
+  <section class="slider_section">
+    <div class="glide hero">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide slide_1">
+            <div class="slide_content">
+              <h2>Slide 1</h2>
+              <p> 1We've made some tasty new tweaks.</p>
+              <a class="button"> Order Online</a>
+            </div>
+          </li>
+          <li class="glide__slide slide_2">
+            <div class="slide_content">
+              <h2>Slide 2</h2>
+              <p> 2We've made some tasty new tweaks.</p>
+              <a class="button"> Order Online</a>
+            </div>
+          </li>
+          <li class="glide__slide slide_3">
+            <div class="slide_content">
+              <h2>Slide 3</h2>
+              <p> 3We've made some tasty new tweaks.</p>
+              <a class="button"> Order Online</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="glide__arrows glide__arrows--next" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--prev" data-glide-dir="<">prev</button>
+        <button class="glide__arrow glide__arrow--next" data-glide-dir=">">next</button>
+      </div>
+    </div>
+
+  </section>
 
   <footer>
 
   </footer>
+  <script src="script.js"></script>
+
 </body>
 
 
