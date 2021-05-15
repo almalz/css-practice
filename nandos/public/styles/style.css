@@ -244,12 +244,32 @@ header .utility_links ul li .profile_button:hover {
 }
 .slide_content h2 {
   transform: rotate(-3deg);
+  margin: 2.5rem 0 2.875rem;
 }
-.slide_content h2:before {
-  background: url(/assets/lins.png);
+.slide_content h2::before, .slide_content h2::after {
+  background: url(/assets/line.png) top left no-repeat;
+  position: absolute;
+  left: 50%;
+  display: block;
+  width: 139px;
+  height: 14px;
+  content: "";
+  background-size: contain;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  z-index: 10;
 }
-.slide_content h2:after {
-  background: url(/assets/lins.png);
+.slide_content h2::before {
+  top: -20px;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.slide_content h2::after {
+  bottom: -40px;
+  -webkit-transform: rotate(187deg) translate(50%, 0);
+  -ms-transform: rotate(187deg) translate(50%, 0);
+  transform: rotate(187deg) translate(50%, 0);
 }
 .slide_content p {
   font-size: 1.125rem;

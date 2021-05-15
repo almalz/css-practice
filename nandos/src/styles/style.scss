@@ -215,11 +215,32 @@ header {
   backface-visibility: visible;
   h2 {
     transform: rotate(-3deg);
-    &:before {
-      background: url(/assets/lins.png);
+    margin: 2.5rem 0 2.875rem;
+    &::before,
+    &::after {
+      background: url(/assets/line.png) top left no-repeat;
+      position: absolute;
+      left: 50%;
+      display: block;
+      width: 139px;
+      height: 14px;
+      content: '';
+      background-size: contain;
+      -webkit-backface-visibility: visible;
+      backface-visibility: visible;
+      z-index: 10;
     }
-    &:after {
-      background: url(/assets/lins.png);
+    &::before {
+      top: -20px;
+      -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+    }
+    &::after {
+      bottom: -40px;
+      -webkit-transform: rotate(187deg) translate(50%, 0);
+      -ms-transform: rotate(187deg) translate(50%, 0);
+      transform: rotate(187deg) translate(50%, 0);
     }
   }
   p {
