@@ -301,9 +301,8 @@ header .utility_links ul li .profile_button:hover {
 }
 
 .slide_content {
-  position: absolute;
+  position: relative;
   margin: auto;
-  width: 60%;
   top: 30%;
   z-index: 10;
   transition-property: none;
