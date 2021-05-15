@@ -1,5 +1,4 @@
 @import '../../node_modules/@glidejs/glide/src/assets/sass/glide.core';
-@import '../../node_modules/@glidejs/glide/src/assets/sass/glide.theme';
 
 $white: #ffffff;
 $black: #000000;
@@ -7,6 +6,7 @@ $cyan: #00e2c2;
 $light_green: #96c31e;
 $dark_green: #02555b;
 $medium_green: #73b455;
+$flash_green: #73ff1e;
 $pink: #f701b5;
 $orange: #fda31a;
 $yellow: #ffff00;
@@ -60,7 +60,7 @@ a.button {
 }
 
 header {
-  background-color: white;
+  background-color: $white;
   display: flex;
   width: 100%;
   .logo {
@@ -154,11 +154,26 @@ header {
   line-height: 100px;
   margin: 0;
   text-align: center;
-  // -webkit-transform: translate3d(0, 0, 0);
-  // -moz-transform: translate3d(0, 0, 0);
-  // -ms-transform: translate3d(0, 0, 0);
-  // -o-transform: translate3d(0, 0, 0);
-  // transform: translate3d(0, 0, 0);
+}
+
+@keyframes bounceX {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(var(--bouceDirection));
+  }
+}
+
+@keyframes bounceY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(var(--bouceDirection));
+  }
 }
 
 .glide__slide--active {
@@ -178,21 +193,16 @@ header {
   position: absolute;
   display: block;
   top: 50%;
-  color: white;
-  padding: 9px 12px;
-  background-color: red;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 4px;
-  opacity: 1;
   cursor: pointer;
-  transition: opacity 150ms ease, border 300ms ease-in-out;
-  transform: translateY(-50%);
-  line-height: 1;
 }
 .glide__arrow--prev {
+  --bouceDirection: -3px;
   left: 5%;
+  animation: bounceX 1s infinite;
 }
 .glide__arrow--next {
+  --bouceDirection: +3px;
+  animation: bounceX 1s infinite;
   right: 5%;
 }
 
@@ -228,4 +238,37 @@ header {
 
 .slide_3 {
   background-image: url(/assets/Homepage20180020x20771_desktop.jpeg);
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  &.triangle-left {
+    border-top: 9px solid transparent;
+    border-right: 19px solid $flash_green;
+    border-bottom: 9px solid transparent;
+  }
+  &.triangle-right {
+    border-top: 9px solid transparent;
+    border-left: 19px solid $flash_green;
+    border-bottom: 9px solid transparent;
+  }
+  &.triangle-down {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 24px solid $yellow;
+  }
+}
+
+.down-arrow {
+  position: absolute;
+  left: 50%;
+  bottom: -2%;
+  z-index: 110;
+  --bouceDirection: +3px;
+  animation: bounceY 1s infinite;
+  z-index: 90;
+  z-index: 90;
+  display: block;
+  cursor: pointer;
 }
