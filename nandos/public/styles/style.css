@@ -236,8 +236,8 @@ header .utility_links ul li .profile_button:hover {
 
 .slide_content {
   position: relative;
-  margin: auto;
-  top: 30%;
+  top: calc(50% + 25px);
+  transform: translate(0%, -50%);
   z-index: 10;
   transition-property: none;
   backface-visibility: visible;
@@ -316,9 +316,57 @@ header .utility_links ul li .profile_button:hover {
   --bouceDirection: +3px;
   animation: bounceY 1s infinite;
   z-index: 90;
-  z-index: 90;
   display: block;
   cursor: pointer;
+}
+
+.coloured-panels {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+
+.coloured-panel {
+  height: 497px;
+  width: calc(100% / 3);
+}
+.coloured-panel.panel-dark {
+  color: #000000;
+}
+.coloured-panel.panel-light {
+  color: #ffffff;
+}
+.coloured-panel a {
+  display: inline-block;
+  color: #000000;
+  margin: 1rem;
+}
+.coloured-panel .panel-content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  padding: 0 1.25rem;
+  max-width: 485px;
+  transform: translate(-50%, -50%);
+}
+.coloured-panel h2 {
+  margin: 0 auto 2.5rem;
+}
+.coloured-panel p {
+  margin: 0 auto 2.5rem;
+  font-size: 1.25rem;
+}
+
+.first-panel {
+  background-color: #fda31a;
+}
+
+.second-panel {
+  background-color: #02555b;
+}
+
+.third-panel {
+  background-color: #96c31e;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -208,8 +208,9 @@ header {
 
 .slide_content {
   position: relative;
-  margin: auto;
-  top: 30%;
+  // margin-bottom: 2rem;
+  top: calc(50% + 25px);
+  transform: translate(0%, -50%);
   z-index: 10;
   transition-property: none;
   backface-visibility: visible;
@@ -289,7 +290,55 @@ header {
   --bouceDirection: +3px;
   animation: bounceY 1s infinite;
   z-index: 90;
-  z-index: 90;
   display: block;
   cursor: pointer;
+}
+
+.coloured-panels {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+
+.coloured-panel {
+  height: 497px;
+  width: calc(100% / 3);
+  &.panel-dark {
+    color: $black;
+  }
+  &.panel-light {
+    color: $white;
+  }
+  a {
+    display: inline-block;
+    color: $black;
+    margin: 1rem;
+  }
+  .panel-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    padding: 0 1.25rem;
+    max-width: 485px;
+    transform: translate(-50%, -50%);
+  }
+  h2 {
+    margin: 0 auto 2.5rem;
+  }
+  p {
+    margin: 0 auto 2.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+.first-panel {
+  background-color: $orange;
+}
+
+.second-panel {
+  background-color: $dark_green;
+}
+
+.third-panel {
+  background-color: $light_green;
 }
